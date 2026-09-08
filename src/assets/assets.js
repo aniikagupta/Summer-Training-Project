@@ -1,0 +1,57 @@
+// src/assets/assets.js
+export const products = [
+  {
+    _id: "aaaaa",
+    name: "Women Round Neck Cotton Top",
+    description: "A lightweight, knitted, pullover shirt, close-fitting and with a round neckline.",
+    price: 100,
+    image: ["https://picsum.photos/400/500?random=1"],
+    category: "Women",
+    subCategory: "Topwear",
+    sizes: ["S", "M", "L", "XL"],
+    date: 1716634345448,
+    bestseller: true,
+    delivery_fee: 20,
+  },
+  {
+    _id: "aaaab",
+    name: "Men Round Neck Pure Cotton T-shirt",
+    description: "A pure cotton t-shirt designed for ultimate comfort and daily wear.",
+    price: 200,
+    image: ["https://picsum.photos/400/500?random=2"],
+    category: "Men",
+    subCategory: "Topwear",
+    sizes: ["M", "L", "XL"],
+    date: 1716621345448,
+    bestseller: false,
+    delivery_fee: 20,
+  },
+  {
+    _id: "aaaac",
+    name: "Girls Round Neck Cotton Top",
+    description: "Soft and breathable cotton top tailored for active daily wear.",
+    price: 150,
+    image: ["https://picsum.photos/400/500?random=3"],
+    category: "Kids",
+    subCategory: "Topwear",
+    sizes: ["S", "M"],
+    date: 1716234545448,
+    bestseller: true,
+    delivery_fee: 20,
+  
+  },
+  {
+    _id: "aaaad",
+    name: "Men Slim Fit Denim Pants",
+    description: "Classic slim-fit jeans crafted from durable stretch denim.",
+    price: 250,
+    image: ["https://picsum.photos/400/500?random=4"],
+    category: "Men",
+    subCategory: "Bottomwear",
+    sizes: ["30", "32", "34"],
+    date: 1716621545448,
+    bestseller: false,
+    delivery_fee: 20,
+    
+  }
+];
