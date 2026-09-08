@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {useContext,useEffect,useState} from 'react'
 import {ShopContext} from '../context/ShopContext'
 import { useParams } from 'react-router-dom'
@@ -72,9 +72,7 @@ const Product = () => {
           <p>COD is Available</p>
           <p>Easy Return & Exchange Policy</p>
         </div>
-
         </div>
-
       </div>
       {/* PRODUCT DESCRIPTION*/ }
       <div className='mt-20'>
@@ -84,12 +82,9 @@ const Product = () => {
         </div>
         <div className='flex flex-col gap-4 px-6 py-6 text-sm text-gray-500'>
           <p></p>
-        </div>
-         
+        </div>  
       </div>
-
     </div>
   ):<div className="opacity-0"></div>
 }
-
 export default Product

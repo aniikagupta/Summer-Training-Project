@@ -80,14 +80,7 @@ const Collection = () => {
       setCategories(prev => [...prev, e.target.value]);
     }
   }
-  const togglecategory = (e) => {
-    if(subCategories.includes(e.target.value)){
-      setSubCategories(prev => prev.filter( item=> item !== e.target.value));
-    }
-    else{
-      setSubCategories(prev => [...prev, e.target.value]);
-    }
-  }
+ 
   const toggleSubCategory = (e) => {
     if(subCategories.includes(e.target.value)){
       setSubCategories(prev => prev.filter( item=> item !== e.target.value)); 

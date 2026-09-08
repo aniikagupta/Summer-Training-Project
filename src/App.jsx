@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Collection from './pages/Collection'
@@ -13,7 +12,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Searchbar from './components/Searchbar'
 import { ToastContainer } from 'react-toastify';
-import Hero from './components/Hero'
+
 
 function App() {
   return (
@@ -45,3 +44,8 @@ function App() {
 }
 
 export default App
+
+
+
+
+

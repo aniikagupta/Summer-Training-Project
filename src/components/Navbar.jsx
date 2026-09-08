@@ -36,11 +36,9 @@ const Navbar = () => {
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
 
             </NavLink>
+            </ul>
 
 
-
-
-        </ul>
         <div className="flex items-center gap-3 text-sm">
             <img onClick={()=>setShowSearch(true)}src={search} className='w-7  cursor-pointer ' alt="search" />
             <div className="group relative">
@@ -62,7 +60,7 @@ const Navbar = () => {
             </Link>
             <img onClick={() => setVisible(true)} src={menu} className='w-7 cursor-pointer sm:hidden ' alt="" />
 
-    </div>
+       </div>
     <div className={`absolute top-0 left-0 overflow-hidden  bg-white transition-all ${visible ? 'w-full' : 'w-0'} `}>
         <div className={`flex flex-col text-gray-500`}>
             <div onClick={() => setVisible(false)} className="flex items-center gap-4 p-3">
@@ -83,3 +81,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
