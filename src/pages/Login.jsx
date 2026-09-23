@@ -105,8 +105,8 @@ const Login = () => {
       // Decide which backend API to call
       const endpoint =
         currentState === 'Login'
-          ? 'http://localhost:4000/api/login'
-          : 'http://localhost:4000/api/signup';
+          ? 'https://summer-training-project-8hv1.onrender.com/api/login'
+          : 'https://summer-training-project-8hv1.onrender.com/api/signup';
 
       // Data sent to backend
       const body =

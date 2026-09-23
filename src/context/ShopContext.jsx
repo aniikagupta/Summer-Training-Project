@@ -231,7 +231,7 @@ import { useNavigate } from "react-router-dom";
 export const ShopContext = createContext();
 
 // the local backend from the /backend folder
-const API_URL = 'http://localhost:4000/api'
+const API_URL = 'https://summer-training-project-8hv1.onrender.com'
 
 export const ShopContextProvider = ({ children }) => {
   const currency = '$'
