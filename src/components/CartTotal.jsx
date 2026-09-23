@@ -1,29 +1,67 @@
+// import React, { useContext } from 'react'
+// import { ShopContext } from '../context/ShopContext'
+// import Title from '../components/Title'
+// const CartTotal = () => {
+//     const {currency,delivery_fee,getcartamt}=useContext(ShopContext)
+//   return (
+//     <div className='w-full'>
+//       <div className='text-2xl'>
+//         <Title text1={'CART'} text2={'TOTAL'}/>
+//       </div>
+//       <div className='flex flex-col gap-2 mt-2 text-sm'>
+//         <div className='flex justify-between'>
+//           <p>Subtotal</p>
+//           <p>{currency}{getcartamt().toFixed(2)}</p>
+          
+//           </div>
+//           <hr/>
+//           <div className='flex justify-between'>
+//             <p>Delivery Fee</p>
+//             <p>{currency}{delivery_fee.toFixed(2)}</p>
+           
+//         </div>
+//          <hr/>
+//         <div className='flex justify-between'>
+//           <b>Total</b>
+//           <b>{currency}{getcartamt()===0?0:(getcartamt() + delivery_fee).toFixed(2)}</b>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default CartTotal
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
-import Title from '../components/Title'
+import Title from './Title'
+
 const CartTotal = () => {
-    const {currency,delivery_fee,getcartamt}=useContext(ShopContext)
+  const { currency, delivery_fee, getcartamt } = useContext(ShopContext)
+
+  const subtotal = getcartamt()
+  // no delivery fee if the cart is empty
+  const fee = subtotal === 0 ? 0 : delivery_fee
+  const total = subtotal + fee
+
   return (
     <div className='w-full'>
       <div className='text-2xl'>
-        <Title text1={'CART'} text2={'TOTAL'}/>
+        <Title text1={'CART'} text2={'TOTAL'} />
       </div>
       <div className='flex flex-col gap-2 mt-2 text-sm'>
         <div className='flex justify-between'>
           <p>Subtotal</p>
-          <p>{currency}{getcartamt().toFixed(2)}</p>
-          
-          </div>
-          <hr/>
-          <div className='flex justify-between'>
-            <p>Delivery Fee</p>
-            <p>{currency}{delivery_fee.toFixed(2)}</p>
-           
+          <p>{currency}{subtotal.toFixed(2)}</p>
         </div>
-         <hr/>
+        <hr />
+        <div className='flex justify-between'>
+          <p>Delivery Fee</p>
+          <p>{currency}{fee.toFixed(2)}</p>
+        </div>
+        <hr />
         <div className='flex justify-between'>
           <b>Total</b>
-          <b>{currency}{getcartamt()===0?0:(getcartamt() + delivery_fee).toFixed(2)}</b>
+          <b>{currency}{total.toFixed(2)}</b>
         </div>
       </div>
     </div>

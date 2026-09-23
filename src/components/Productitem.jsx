@@ -1,60 +1,31 @@
-import React from 'react'
+
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
-import {Link} from 'react-router-dom'
-import {useContext} from 'react'
-import {useState} from 'react'
-import {useEffect} from 'react'
 
-const Productitem = ({id,image,name,price}) => {
+const Productitem = ({ id, image, name, price }) => {
+  const { currency } = useContext(ShopContext)
 
-    const currency=useContext(ShopContext)
   return (
-  
+    <Link
+      to={`/product/${id}`}
+      className="block text-gray-700 hover:text-black cursor-pointer"
+    >
+      {/* Fixed-size image container */}
+      <div className="overflow-hidden aspect-[3/4] bg-gray-100">
+        <img
+          className="w-full h-full object-cover object-center hover:scale-110 transition ease-in-out duration-300"
+          src={image[0]}
+          alt={name}
+        />
+      </div>
 
-    
-     <Link className="text-gray-700 cursor-pointer"to={`/product/${id}`}  onClick={(e) => {
-    console.log("CLICKED ID:", id)
-    console.log("GOING TO:", `/product/${id}`)}}> 
-        <div className="overflow-hidden">
-            <img className="hover:scale-110 transition ease-in-out" src={image[0]} alt=""/>
-
-       </div>
-       <p className="pt-3 pb-1 text-sm">{name}</p>
-
-      <p className="pb-3 text-sm font-medium">${price.toFixed(2)}</p>
+      <p className="pt-3 pb-1 text-sm">{name}</p>
+      <p className="pb-3 text-sm font-medium">
+        {currency}{price.toFixed(2)}
+      </p>
     </Link>
-    
   )
 }
 
 export default Productitem
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// const Productitem = ({ id, image, name, price }) => {
-
-//     console.log("ID RECEIVED:", id)
-
-//     return (
-//         <Link
-//             className="text-gray-700 cursor-pointer"
-//             to={`/product/${id}`}
-//         >
-//             <div className="overflow-hidden">
-//                 <img
-//                     className="hover:scale-110 transition ease-in-out"
-//                     src={image[0]}
-//                     alt=""
-//                 />
-//             </div>
-
-//             <p className="pt-3 pb-1 text-sm">{name}</p>
-
-//             <p className="pb-3 text-sm font-medium">
-//                 ${price.toFixed(2)}
-//             </p>
-//         </Link>
-//     )
-// }
-
-// export default Productitem
