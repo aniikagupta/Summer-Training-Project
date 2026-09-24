@@ -17,7 +17,7 @@ const About = () => {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <img
-            src="/about.jpg"
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
             alt="Our store"
             className="w-full rounded-lg"
           />
